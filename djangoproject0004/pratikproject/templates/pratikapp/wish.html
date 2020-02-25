@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {%if student %}
+    <table border='1'>
+      <thead>
+        <th>STUDENT NAME</th>
+        <th>STUDDENT NO</th>
+        <th>STUDENT MARKS</th>
+      </thead>
+      {% for stu in student%}
+        <tr>
+          <td>{{stu.sname}}</td>
+          <td>{{stu.sno}}</td>
+          <td>{{stu.smarks}}</td>
+        </tr>
+      {% endfor%}
+
+
+    </table>
+    {% else%}
+    print('student not found')
+     {% endif%}
+  </body>
+</html>
